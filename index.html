@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Seat Reservation System</title>
+        <link rel="stylesheet" href="styles.css" />
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <div class="SeatReservationSystem">
+            <div class="movie-container">
+                <label>Select a movie :</label>
+                <select id="movie">
+                    <option value="150">KATHAL</option>
+                    <option value="200">KGF</option>
+                    <option value="300">RRR</option>
+                    <option value="110">JO & JO</option>
+                    <option value="150">Ravanaprabhu</option>
+                </select>
+            </div>
+
+            <ul class="showcase">
+                <li>
+                    <div class="seat"></div>
+                    <small>Available</small>
+                </li>
+                <li>
+                    <div class="seat selected"></div>
+                    <small>Selected</small>
+                </li>
+                <li>
+                    <div class="seat reserved"></div>
+                    <small>Reserved</small>
+                </li>
+                <li>
+                    <small class="ticket">Ticket Price : <span class="TicketPrice">130</span></small>
+                </li>
+            </ul>
+
+            <div class="TimingsAndDate">
+                <div class="timings">
+                    <div class="dates">
+                        <div class="date-month">
+                            <div class="month">Nov</div>
+                        </div>
+                        <button class="PaginationArrow leftbutton">&laquo;</button>
+                        <div class="dateAndday">
+                        <div>
+                                <input type="radio" class="datesInput" name="date" id="d17" />
+                                <label for="d17" class="dates-item">
+                                    <div class="day">Fri</div>
+                                    <div class="date">17</div>
+                                </label>
+                            </div>
+                        </div>
+                        <button class="PaginationArrow rightbutton">&raquo;</button>
+                    </div>
+                    <div class="times">
+                        <div class="Timing-date">
+                            <div class="month">Timings</div>
+                        </div>
+                        <button class="PaginationArrow">:</button>
+                        <input type="radio" name="time" id="t1" />
+                        <label for="t1" class="time">11.00</label>
+                        <input type="radio" name="time" id="t2" />
+                        <label for="t2" class="time">14.30</label>
+                        <input type="radio" name="time" id="t3" />
+                        <label for="t3" class="time">18.00</label>
+                        <input type="radio" name="time" id="t4" />
+                        <label for="t4" class="time">21.30</label>
+                    </div>
+                </div>
+                <div class="price">
+                    <div class="total">
+                        <div class="amountAndticket">
+                            Tickets - <span class="count">0</span>&nbsp;/&nbsp; Amount-<span class="amount">0</span>
+                        </div>
+                        <div type="button" class="BookButton">Book Ticket</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div id="seating">
+                    <section id="left">
+                        <!-- Using Javascript to replace this -->
+                        <!-- <div class="label">A</div>
+                    <div class="seat" id="a1">1</div>
+                    <div class="seat" id="a2">2</div>
+                    <div class="seat" id="a3">3</div>
+                    <div class="seat" id="a4">4</div> -->
+                    </section>
+                    <section id="middle">
+                        <!-- Using Javascript to replace this -->
+                        <!-- <div class="seat" id="a5">5</div>
+                    <div class="seat reserved" id="a6">6</div>
+                    <div class="seat" id="a7">7</div>
+                    <div class="seat" id="a8">8</div>
+                    <div class="seat" id="a9">9</div>
+                    <div class="seat reserved" id="a10">10</div>
+                    <div class="seat reserved" id="a11">11</div>
+                    <div class="seat" id="a12">12</div>
+                    <div class="seat" id="a13">13</div>
+                    <div class="seat reserved" id="a14">14</div> -->
+                    </section>
+                    <section id="right">
+                        <!-- Using Javascript to replace this -->
+                        <!--  <div class="seat reserved" id="a15">15</div>
+                    <div class="seat reserved" id="a16">16</div>
+                    <div class="seat reserved" id="a17">17</div>
+                    <div class="seat reserved" id="a18">18</div>
+                    <div class="label">A</div> -->
+                    </section>
+                </div>
+                <div id="stage"></div>
+            </div>
+        </div>
+
+        <section class="ticket-Form">
+            <h2>BOOK YOUR SEAT NOW</h2>
+            <div class="card-container">
+                <div class="card-img"></div>
+                <div class="card-content">
+                    <h3 class="ReservationForm">Reservation Form</h3>
+                    <h4 class="NoseatSelected">You have not selected any Seats</h4>
+                    <form id="detailForm">
+                        <div class="form-row">
+                            <input type="text" name="fullname" id="fullname" placeholder="Full Name" required />
+                            <input type="tel" name="mobno" id="mobno" placeholder="Mobile Number" required />
+                        </div>
+                        <div class="form-row">
+                            <h4>
+                                Date : &nbsp;<span class="BookedDate">0</span>&nbsp;&nbsp;&nbsp; Time : &nbsp;<span
+                                    class="BookedTime"
+                                    >0</span
+                                >
+                            </h4>
+                            <b>Seats : &nbsp;<span class="Seatsname"></span></b>
+                            <input type="submit" value="CONFIRM RESERVATION" />
+                        </div>
+                    </form>
+                    <a href="#" class="to-cancel"> ❌ </a>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
